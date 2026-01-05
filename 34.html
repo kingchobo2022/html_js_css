@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 8 - 2</title>
+</head>
+<body>
+    <h2 id="msg">변경 전</h2>
+    <button id="changeBtn">변경</button>
+    <script>
+        document.getElementById("changeBtn")
+           .addEventListener("click", function(){
+                document.getElementById("msg")
+                    .innerText = "버튼을 클릭했습니다.";
+           });
+    </script>
+</body>
+</html>

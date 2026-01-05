@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dialog 태그를 이용한 modal 띄우기</title>
+  <style>
+    dialog::backdrop {
+      background-image: linear-gradient(
+        45deg,
+        magenta,
+        rebeccapurple,
+        dodgerblue,
+        green
+      );
+      opacity: 0.75;
+    }
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+    }
+
+  </style>
+</head>
+<body>
+  <dialog id="myModal">
+    <h2>모달 제목</h2>
+    <p>이것은 HTML5 dialog 태그를 이용한 모달입니다.</p>
+    <button id="closeModal">닫기</button>
+  </dialog>
+
+  <button id="openModal">모달 열기</button>
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const modal = document.getElementById('myModal');
+    const closeBtn = document.getElementById('closeModal');
+    openBtn.addEventListener("click", () => {
+      modal.showModal();
+    });
+    closeBtn.addEventListener("click", () => {
+      modal.close();
+    });
+  </script>
+</body>
+</html>

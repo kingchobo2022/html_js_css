@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 6</title>
+</head>
+<body>
+    <ul id="userList"></ul>
+    <script>
+        // let fruits = ["사과", "바나나", "포도"];
+        
+        // for(let i = 0; i < fruits.length; i++) {
+        //     console.log(fruits[i]);
+        // }
+        // let user = {
+        //     name: "홍길동",
+        //     age: 25,
+        //     isLogin: true
+        // };
+
+        // user.age = 30;
+        // user.name = "전우치";
+        // user.city = "서울";
+
+        // console.log(user);
+        // console.log(user.name);
+        // console.log(user.age);
+
+        let users = [
+            { name: "홍길동", age: 20 },
+            { name: "이순신", age: 30 },
+            { name: "강감찬", age: 40 }
+        ]
+        let html = "";
+        for(let i = 0; i < users.length; i++) {
+            //console.log(users[i].name, users[i].age);
+            html += "<li>" + users[i].name + "("  + users[i].age + "세)</li>";
+        }
+        const ultag = document.getElementById("userList");
+        ultag.innerHTML = html;
+    </script>
+</body>
+</html>

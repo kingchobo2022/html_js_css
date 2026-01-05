@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>왕초보 홈페이지만들기 - 회원가입</title>
+    <link rel="stylesheet" href="css/50.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">왕초보 홈페이지만들기</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">커뮤니티소개</a></li>
+                    <li><a href="#">자유게시판</a></li>
+                    <li><a href="#" class="active">회원가입</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="signup-container">
+        <section class="terms-section">
+            <h2>회원가입 약관</h2>
+            <p>서비스 이용을 위해 아래 약관을 읽고 동의해 주세요.</p>
+            <div class="terms-box">
+                <textarea readonly>
+제 1 조 (목적)
+이 약관은 "왕초보 홈페이지만들기"(이하 "사이트")가 제공하는 서비스의 이용조건 및 절차, 이용자와 사이트의 권리, 의무, 책임사항을 규정함을 목적으로 합니다.
+
+제 2 조 (용어의 정의)
+1. "이용자"란 사이트에 접속하여 이 약관에 따라 서비스를 이용하는 회원을 말합니다.
+2. "회원"이란 사이트에 개인정보를 제공하여 회원등록을 한 자로서, 사이트의 정보를 지속적으로 제공받으며 서비스를 계속적으로 이용할 수 있는 자를 말합니다.
+
+제 3 조 (약관의 효력과 변경)
+1. 이 약관은 이용자에게 공시함으로써 효력이 발생합니다.
+2. 사이트는 사정 변경의 경우와 영업상 중요 사유가 있을 때 약관을 변경할 수 있으며, 변경된 약관은 전항과 같은 방법으로 공시합니다.
+
+제 4 조 (회원의 의무)
+회원은 사이트의 서비스 이용 시 관련 법령을 준수해야 하며, 타인의 권리를 침해하거나 사이트의 운영을 방해하는 행위를 해서는 안 됩니다.                    
+                </textarea>
+            </div>
+
+            <form id="signupForm" action="/49.html" class="signup-form">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreeCheckbox">
+                    <label for="agreeCheckbox">이용약관에 동의합니다. (필수)</label>
+                </div>
+                <button type="submit" class="submit-btn">회원가입 하기</button>
+            </form>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <address>
+                <p>주소 : 서울특별시 중구 세종대로 110</p>
+                <p>대표자 : 홍길동 | 연락처 : 02-123-4567</p>
+            </address>
+            <p class="copyright">&copy; 2026 왕초보 홈페이지만들기. All rights reserved</p>
+        </div>
+    </footer>
+
+    <div id="mainPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-body">
+                <img src="https://cdn.pixabay.com/photo/2025/11/04/07/47/winter-woods-9935921_1280.jpg">
+            </div>
+            <div class="popup-footer">
+                <label class="today-close">
+                    <input type="checkbox" id="todayCheck">
+                    오늘 하루동안 보지 않기</label>
+                <button id="closeBtn" class="close-text-btn">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/50.js"></script>
+</body>
+</html>

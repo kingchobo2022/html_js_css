@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - 4</title>
+</head>
+<body>
+    
+    <input type="checkbox" id="agree">
+    <label for="agree">약관에 동의합니다.</label>
+    <br>
+    <button id="btn">가입</button>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            let agree = document.getElementById("agree").checked;
+            if(!agree) {
+               alert("약관에 동의해야 합니다.") ;
+            } else {
+              alert("다음화면으로 이동하겠습니다.");
+              self.location.href='42.html';
+            }
+        });
+    </script>
+</body>
+</html>

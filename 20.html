@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class & Pseudo elements</title>
+    <style>
+        a:hover {
+            color: red;
+        }
+        a:hover::after {
+            content: " ➡️";
+        }
+        li:first-child{
+            font-weight: bold;
+        }
+        li:last-child{
+            color: green;
+        }
+        li:nth-child(2) {
+            color: red;
+        }
+        p::first-letter {
+            color: red;
+        }
+        p::first-line {
+            color: green;
+        }
+        .title::before {
+            content: "😆 ";
+        }
+        .title::after {
+            content: "😆 ";
+        }
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="#"> 1111</a> <br>
+    <a href="#"> 2222</a> <br>
+    <a href="#"> 3333</a> <br>
+
+    <p class="title">공지사항</p>
+    <a href="#" class="title">링크</a>
+    <ul>
+        <li>사과</li>
+        <li>포토</li>
+        <li>감귤</li>
+    </ul>
+    <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam non minus deserunt accusantium consectetur veniam saepe consequatur? Itaque perspiciatis consequatur eius, possimus optio cumque eligendi, dolore cum quasi debitis corrupti.</p>
+
+    <form action="">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+    </form>
+</body>
+</html>

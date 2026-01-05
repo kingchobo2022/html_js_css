@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 9 - 1</title>
+</head>
+<body>
+    <input type="text" id="age" autocomplete="off">
+    <button id="btn">확인</button>
+    <script>
+        document.getElementById("btn")
+           .addEventListener("click", function() {
+                let age_obj = document.getElementById("age");
+                if (age_obj.value === "" || isNaN(age_obj.value)) {
+                    alert("숫자로 된 나이를 입력하세요.");
+                    age_obj.value = "";
+                    age_obj.focus();
+                } else {
+                    alert(`입력한 나이 : ${age_obj.value}`);
+                }
+           });
+    </script>
+</body>
+</html>

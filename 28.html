@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 5</title>
+</head>
+<body>
+    <button onclick="checkAge()">나이 확인</button>
+    <h2 id="msg"></h2>
+    <script>
+        function checkAge() {
+            let age = 17;
+            let text = "";
+            if( age >= 19 ) {
+                text = "성인입니다.";
+            } else {
+                text = "미성년자입니다.";
+            }
+            const msg = document.getElementById("msg");
+            msg.innerText = text;
+        }
+    </script>
+</body>
+</html>

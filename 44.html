@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 10 async</title>
+</head>
+<body>
+    <h1>javascript 10 - fetch</h1>
+    <button id="btn">데이터 가져오기</button>
+    <p id="status"></p>
+    <pre id="output"></pre>
+    <script>
+        const btn = document.querySelector("#btn");
+        //const btn = document.getElementById("btn");
+        const statusEl = document.querySelector("#status");
+        const output = document.querySelector("#output");
+
+        btn.addEventListener("click", async () => {
+            statusEl.textContent = "로딩 중......";
+            output.textContent = "";
+
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+                if (!res.ok) throw new Error("Http Error: " + res.status);
+                const data = await res.json();
+                output.textContent = JSON.stringify(data, null, 4);
+                statusEl.textContent = "완료 !";
+            } catch (err) {
+                statusEl.textContent = "오류 발생!";
+                output.textContent = String(err);
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 8 - 3</title>
+</head>
+<body>
+    <input type="text" id="nameInput">
+    <button id="btn">확인</button>
+
+    <script>
+        document.getElementById("btn")
+            .addEventListener("click", function() {
+                let name = document.getElementById("nameInput").value;
+                alert("입력한 이름: " + name);
+            });
+    </script>
+</body>
+</html>

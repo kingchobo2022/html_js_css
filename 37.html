@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 8 - 5</title>
+</head>
+<body>
+    <input type="checkbox" id="agree">
+    <span id="msg"></span>
+    <script>
+        document.getElementById("agree")
+          .addEventListener("change", function() {
+            if(this.checked) {
+                document.getElementById("msg").innerText = "동의 함";
+            } else {
+                document.getElementById("msg").innerText = "동의 안함";
+            }    
+          });
+    </script>
+</body>
+</html>

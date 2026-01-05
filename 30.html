@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 7</title>
+</head>
+<body>
+    <p class="item">A</p>
+    <p class="item">B</p>
+    <p class="item">C</p>
+
+    <script>
+        let color = "";
+        let items = document.querySelectorAll(".item");
+        for( let i = 0; i < items.length; i++) {
+            //console.log(items[i]);
+            
+            if(i == 0) {
+                color = "red";
+            } else {
+                color = "green";
+            }
+            items[i].style.color = color;
+            
+        }
+    </script>
+</body>
+</html>

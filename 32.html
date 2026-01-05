@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 추가 / 제거</title>
+    <style>
+        .active {
+            color: white;
+            background-color: orange;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title">제목</h2>
+    <button onclick="toggle()">토글</button>
+    <script>
+        function toggle() {
+            document.getElementById("title").classList.toggle("active");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css border</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            
+            border: 5px solid black;
+            border-width: 20px;
+            border-width: 10px 20px; /* 상하, 좌우 */
+            border-width: 10px 20px 30px; /* 상, 좌우, 하 */
+            border-width: 1px 2px 3px 4px; /* 상,우,하,좌 */
+        }
+        .dashed{
+            height: 50px;
+            margin-top: 10px;
+            border-style: dashed;
+            border-width: 5px;
+        }
+        .dotted{
+            height: 50px;
+            margin-top: 10px;
+            border-style: dotted;
+            border-width: 5px;
+        }
+        .double{
+            height: 50px;
+            margin-top: 10px;
+            border-style: double;
+            border-width: 5px;
+        }
+        .none {
+            border-style: none;
+        }
+        .bd {
+            padding: 20px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>div1</div>
+    <div class="dashed">dashed</div>
+    <div class="dotted">dotted</div>
+    <div class="double">double</div>
+    <div class="none">none</div>
+    <div class="bd">둥근 모서리</div>
+
+</body>
+</html>

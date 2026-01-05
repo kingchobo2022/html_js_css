@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css custom properties</title>
+    <style>
+        :root {
+            --btn-bg: red;
+            --btn-color: white;
+            --btn-padding: 12px 20px;
+        }
+
+        .btn {
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            padding: var(--btn-padding);
+            border: none;
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn">확인</button>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 기초</title>
+    <style>
+
+        
+        body {
+            background-color: lightcoral;
+            
+        }
+        .container {
+            display: flex;   
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #f0f0f0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* 최대  768px 까지 */
+        @media (min-width: 768px) {
+            body {
+                background-color: lightblue;    
+            }
+        }
+
+        /* 768px 이상일때 */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            .card {
+                flex: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">카드 1</div>
+        <div class="card">카드 2</div>
+        <div class="card">카드 3</div>
+    </div>
+</body>
+</html>

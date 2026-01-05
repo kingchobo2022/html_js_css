@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - 3</title>
+</head>
+<body>
+    <input type="text" id="email">
+    <button id="btn">확인</button>
+    <p id="error" style="color:red"></p>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            let email = document.getElementById("email").value;
+            let error = document.getElementById("error");
+            if(email === "") {
+                error.textContent = "이메일을 입력하세요.";
+            } else {
+                error.textContent = "";
+                alert("전송 완료");
+            }
+        });
+    </script>
+
+</body>
+</html>
